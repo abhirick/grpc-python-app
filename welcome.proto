@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package welcome;
+
+// The welcome service definition.
+service WelcomeService {
+  // Sends a welcome message
+  rpc SayWelcome (WelcomeRequest) returns (WelcomeResponse);
+}
+
+// The request message containing the user's name.
+message WelcomeRequest {
+  string name = 1;
+}
+
+// The response message containing the welcome message.
+message WelcomeResponse {
+  string message = 1;
+}
